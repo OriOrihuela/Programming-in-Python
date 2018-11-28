@@ -24,9 +24,9 @@ L = [2, 3, 4]           # A mutable object
 M = L                   # Make a reference to the same object
 L[0] = 24               # A in-place change
 
->>> L
+L
 [24, 3, 4]
->>> M 
+M 
 [24, 3, 4]
 
 # Copia de objetos en referencia #
@@ -34,9 +34,9 @@ L[0] = 24               # A in-place change
 L = [2, 3, 4]
 M = L[:]                # Make a copy of L (or list (L), copy.copy(L), etc.)
 L[0] = 24
->>> L
+L
 [24, 3, 4]
->>> M 
+M 
 [2, 3, 4]               # M is not changed
 
 
@@ -62,7 +62,7 @@ False
 # CACHE #
 
 X = 42
-Y =                     # Should be two different objects
+Y = 42                    # Should be two different objects
 X == Y
 True
 X is Y                  # Same object anyhow: caching at work!!!!
