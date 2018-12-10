@@ -5,24 +5,42 @@
 # los casos test están acorde a ello. 
 
 
-def multiplicar_2_matrices(matrizA, matrizB):
-    matrizC = []
-    fila = 0
-    fila_A = len(matrizA)
-    while fila < fila_A:
-        columna = 0 
-        columna_B = len(matrizB[0])
-        while columna < columna_B:
-            resultado = 0
-            columna_actual = 0
-            columna_A = len(matrizA[0]) ### Columnas de la matriz A 
-            while columna_actual < columna_A:
-                resultado += (matrizA[fila][columna_actual] * matrizB[columna_actual][columna]) ### EL ERROR SALE AQUÍ
-                columna_actual += 1
-            matrizC.append(resultado)
-            columna += 1
-        fila += 1
-    return matrizC
+
+def getMatrixProduct(matrizA, matrizB):
+        
+        if len(matrizA[0]) != len(matrizB):
+            return - 1 
+
+        posfila_A = 0
+        result = []
+        fila_result = []
+        
+
+
+        while posfila_A < len(matrizA):
+
+            poscolumna_B = 0
+
+            while poscolumna_B < len(matrizB[0]):
+                
+                r = 0
+                indiceActual = 0
+
+                while indiceActual < len(matrizA[0]):
+                    r += matrizA[posfila_A][indiceActual] * matrizB[indiceActual][poscolumna_B]
+                    indiceActual += 1
+                
+                fila_result.append(r)
+                poscolumna_B += 1
+            
+            result.append(fila_result)
+            fila_result = []
+            posfila_A += 1
+            
+        return result
+
+
+
 
 
 if __name__ == "__main__":
@@ -39,7 +57,7 @@ if __name__ == "__main__":
                 [6,3,7,2,1],
                 [7,3,1,6,7]]
     
-    print(multiplicar_2_matrices(matriz1, matriz2))
+    print(getMatrixProduct(matriz1, matriz2))
 
 
 
@@ -52,7 +70,7 @@ if __name__ == "__main__":
     matriz4 = [[1,6,7,5,3,6,2],
                 [6,3,7,2,1,7,9]]
     
-    print (multiplicar_2_matrices(matriz3,matriz4))
+    print (getMatrixProduct(matriz3,matriz4))
 
 
 
@@ -64,8 +82,8 @@ if __name__ == "__main__":
 
     matriz6 = [[1,6,7],
                 [6,3,7],
-                [7,3,1]
-                [1,1,1]
+                [7,3,1],
+                [1,1,1],
                 [7,5,7]]
     
-    print (multiplicar_2_matrices(matriz5,matriz6))
+    print (getMatrixProduct(matriz5,matriz6))
