@@ -1,7 +1,7 @@
 
 
 
-def bubblesort(lista):
+def bubbleSort(lista):
     recorrer_array = True
     pos = 0
     aux = 0
@@ -24,8 +24,12 @@ if __name__ == "__main__":
     # TEST CASES # 
 
     
-    assert bubblesort([13,76,54,34,23,67,89]) == [13,23,34,54,67,76,89]
-    assert bubblesort([10,2,4,7,99]) == [2,4,7,10,99]
+    assert bubbleSort([13,76,54,34,23,67,89]) == [13,23,34,54,67,76,89]
+    assert bubbleSort([10,2,4,7,99]) == [2,4,7,10,99]
+    assert bubbleSort(['a', 'u', 'i', 'e', 'o']) == sorted(['a', 'u', 'i', 'e', 'o'])
+    assert bubbleSort(['spam', 'ham', 'elmo']) == sorted(['spam', 'ham', 'elmo'])
+    assert bubbleSort(['a', 'b', 'A', 'd', 'c', 'P']) == sorted(['a', 'b', 'A', 'd', 'c', 'P'])
+    assert bubbleSort([1.4, 5, 3, 3.5, 2, 4.1]) == sorted([1.4, 5, 3, 3.5, 2, 4.1])
 
 
 
