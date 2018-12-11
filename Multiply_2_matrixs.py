@@ -15,8 +15,6 @@ def getMatrixProduct(matrizA, matrizB):
         result = []
         fila_result = []
         
-
-
         while posfila_A < len(matrizA):
 
             poscolumna_B = 0
@@ -70,7 +68,7 @@ if __name__ == "__main__":
     matriz4 = [[1,6,7,5,3,6,2],
                 [6,3,7,2,1,7,9]]
     
-    print (getMatrixProduct(matriz3,matriz4))
+    assert (getMatrixProduct(matriz3,matriz4))
 
 
 
@@ -86,4 +84,4 @@ if __name__ == "__main__":
                 [1,1,1],
                 [7,5,7]]
     
-    print (getMatrixProduct(matriz5,matriz6))
+    assert getMatrixProduct(matriz5,matriz6)
