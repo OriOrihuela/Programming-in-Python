@@ -1,6 +1,6 @@
 
 
-def Insertion(array):
+def insertionSort(array):
 	posInicial = 0
 	aux = 0
 
@@ -29,9 +29,9 @@ if __name__ == '__main__':
 	# TEST CASES #
 
 	
-	assert Insertion([13,76,54,34,23,67,89]) == [13,23,34,54,67,76,89]
-	assert Insertion([10,2,4,7,99]) == [2,4,7,10,99]
-	assert Insertion(['a', 'u', 'i', 'e', 'o']) == sorted(['a', 'u', 'i', 'e', 'o'])
-	assert Insertion(['spam', 'ham', 'elmo']) == sorted(['spam', 'ham', 'elmo'])
-	assert Insertion(['a', 'b', 'A', 'd', 'c', 'P']) == sorted(['a', 'b', 'A', 'd', 'c', 'P'])
-	assert Insertion([1.4, 5, 3, 3.5, 2, 4.1]) == sorted([1.4, 5, 3, 3.5, 2, 4.1])
+	assert insertionSort([13,76,54,34,23,67,89]) == [13,23,34,54,67,76,89]
+	assert insertionSort([10,2,4,7,99]) == [2,4,7,10,99]
+	assert insertionSort(['a', 'u', 'i', 'e', 'o']) == sorted(['a', 'u', 'i', 'e', 'o'])
+	assert insertionSort(['spam', 'ham', 'elmo']) == sorted(['spam', 'ham', 'elmo'])
+	assert insertionSort(['a', 'b', 'A', 'd', 'c', 'P']) == sorted(['a', 'b', 'A', 'd', 'c', 'P'])
+	assert insertionSort([1.4, 5, 3, 3.5, 2, 4.1]) == sorted([1.4, 5, 3, 3.5, 2, 4.1])
