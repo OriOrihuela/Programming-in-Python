@@ -25,5 +25,3 @@ if __name__ == "__main__":
     assert not isPrime(1)
     assert isPrime(2)
     assert not isPrime(0)
-
-    
