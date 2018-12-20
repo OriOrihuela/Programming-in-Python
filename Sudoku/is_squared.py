@@ -98,5 +98,3 @@ if __name__ == "__main__":
         print("Este caso test es correcto")
     else :
         print("Este caso test es incorrecto")
-
-
