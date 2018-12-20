@@ -1,7 +1,7 @@
-from es_cuadrada import esCuadrada
-from numeros_en_rango import numerosEnRango
-from numero_no_repetido_fila import numeroNoRepetidoFila
-from numero_no_repetido_columnas import numeroNoRepetidoColumna
+from is_squared import esCuadrada
+from numbers_in_range import numerosEnRango
+from non_repeated_numbers_rows import numeroNoRepetidoFila
+from non_repeated_numbers_columns import numeroNoRepetidoColumna
 
 def checkSudoku(sudoku):
     if sudoku == esCuadrada and numerosEnRango and numeroNoRepetidoFila and numeroNoRepetidoColumna:
