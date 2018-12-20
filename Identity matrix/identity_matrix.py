@@ -42,37 +42,32 @@ if __name__ == "__main__":
             [0,0,1,0],
             [0,0,0,1]]
     
-    print (esMatrizIdentidad(matrix1))
-    #>>>True
+    assert esMatrizIdentidad(matrix1) == True
 
     matrix2 = [[1,0,0],
             [0,1,0],
             [0,0,0]]
 
-    print (esMatrizIdentidad(matrix2))
-    #>>>False
+    assert esMatrizIdentidad(matrix2) == False 
 
     matrix3 = [[2,0,0],
             [0,2,0],
             [0,0,2]]
 
-    print (esMatrizIdentidad(matrix3))
-    #>>>False
+    assert esMatrizIdentidad(matrix3) == False 
 
     matrix6 = [[1,0,0,0],  
             [0,1,0,2],  
             [0,0,1,0],  
             [0,0,0,1]]
 
-    print (esMatrizIdentidad(matrix6))
-    #>>>False
+    assert esMatrizIdentidad(matrix6) == False 
 
     matrix7 = [[1, -1, 1],
             [0, 1, 0],
             [0, 0, 1]]
    
-    print (esMatrizIdentidad(matrix7))
-    #>>>False           
+    assert esMatrizIdentidad(matrix7) == False           
 
 
     # casos test que no satisfacen la precondicion de que la matriz sea cuadrada (assert):
@@ -81,10 +76,8 @@ if __name__ == "__main__":
             [0,1,1,0],
             [0,0,0,1]]
 
-    print (esMatrizIdentidad(matrix4))
-    #>>>False
+    assert esMatrizIdentidad(matrix4) == False
 
     matrix5 = [[1,0,0,0,0,0,0,0,0]]
 
-    print (esMatrizIdentidad(matrix5))
-    #>>>False
+    assert esMatrizIdentidad(matrix5) == False
