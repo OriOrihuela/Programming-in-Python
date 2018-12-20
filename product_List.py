@@ -20,15 +20,8 @@ def product_list(lista):
 
 
 
-
-
 if __name__ == "__main__":
 
-    print (product_list([9]))
-    #>>> 9
-
-    print (product_list([1,2,3,4]))
-    #>>> 24
-
-    print (product_list([]))
-    #>>>1
+    assert product_list([9]) == 9
+    assert product_list([1,2,3,4]) == 24
+    assert product_list([]) == 1
