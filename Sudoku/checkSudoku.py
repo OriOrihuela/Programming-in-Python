@@ -9,6 +9,8 @@ def checkSudoku(sudoku):
     else:
         return False
 
+
+
 if __name__ == "__main__":
 
 ### CASOS TEST para comprobar si los números son únicos en la misma columna.
