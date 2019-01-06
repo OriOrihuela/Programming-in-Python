@@ -1,6 +1,6 @@
-from item import Item
+from normal_Item import NormalItem
 
-class AgedBrie(Item):
+class AgedBrie(NormalItem):
 
     # Override metodo setQuality de NormalItem
     def setQuality(self, valor):
