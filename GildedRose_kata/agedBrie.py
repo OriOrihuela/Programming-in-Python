@@ -2,6 +2,9 @@ from normal_Item import NormalItem
 
 class AgedBrie(NormalItem):
 
+    def __init__(self, name, sell_in, quality):
+        NormalItem.__init__(self, name, sell_in, quality)
+    
     # Override metodo setQuality de NormalItem
     def setQuality(self, valor):
 
