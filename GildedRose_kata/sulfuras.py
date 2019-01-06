@@ -11,9 +11,6 @@ class Sulfuras():
         assert self.quality == 80, "Quality de %s no es 80" % self.__class__.__name__
         self.quality = 80
 
-    def __repr__(self):
-        return "%s, %s, %s" % (self.name, self.sell_in, self.quality)
-
 
 if __name__ == '__main__':
 
