@@ -1,4 +1,6 @@
-class Sulfuras():
+from normal_Item import NormalItem
+
+class Sulfuras(NormalItem):
 
     ### PROPIEDADES DE LA CLASE SULFURAS ###
 
