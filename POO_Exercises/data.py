@@ -17,17 +17,17 @@ class Data():
 
     def setDay(self, day):
         self.day = day
-    def getDay(self, day):
+    def getDay(self):
         return self.day
     
     def setMonth(self, month):
         self.month = month
-    def getMonth(self, month):
+    def getMonth(self):
         return self.month
     
     def setYear(self, year):
         self.year = year
-    def getYear(self, year):
+    def getYear(self):
         return self.year
     
     def setDate(self, day, month, year):
