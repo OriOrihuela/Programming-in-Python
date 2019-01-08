@@ -60,7 +60,7 @@ class Data():
         except ValueError:
             print("%s not a integer" % number)
 
-    def printNameMonth(self, month):
+    def printNameMonth(self):
         values = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
         keys = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         months = dict(zip(keys,values))
@@ -68,6 +68,5 @@ class Data():
             self.month = months[keys]
         return self
 
-    def  printDate(self, day, month, year):
-        return str(self.day) + ":" + self.printNameMonth(self.month) + ":" + str(self.year)
-            
+    def  printDate(self):
+        return str(self.day) + ":" + Data.printNameMonth(self.month) + ":" + str(self.year)
