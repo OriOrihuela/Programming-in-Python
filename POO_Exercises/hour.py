@@ -29,7 +29,7 @@ class Hour():
         return self.seconds
     
 
-    def setHour(self, hour, minutes, seconds):
+    def setFullHour(self, hour, minutes, seconds):
         assert self.hour in range(0, 25) and self.minutes in range(0, 60) and self.seconds in range(0, 60)
         try:
             self.hour = hour
@@ -39,3 +39,6 @@ class Hour():
             self.hour = 0 
             self.minutes = 0
             self.seconds = 0
+    
+    def getFullHour(self, hour, minutes, seconds):
+        return [self.hour, self.minutes, self.seconds]
