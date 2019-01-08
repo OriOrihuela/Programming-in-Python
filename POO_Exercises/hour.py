@@ -15,17 +15,17 @@ class Hour():
     
     def setHour(self, hour):
         self.hour = hour
-    def getHour(self, hour):
+    def getHour(self):
         return self.hour
     
     def setMinutes(self, minutes):
         self.minutes = minutes
-    def getMinutes(self, minutes):
+    def getMinutes(self):
         return self.minutes
     
     def setSeconds(self, seconds):
         self.seconds = seconds
-    def getSeconds(self, seconds):
+    def getSeconds(self):
         return self.seconds
     
 
