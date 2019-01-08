@@ -40,11 +40,14 @@ class Hour():
             self.minutes = 0
             self.seconds = 0
     
-    def getFullHour(self, hour, minutes, seconds):
-        return [self.hour, self.minutes, self.seconds]
+    def getFullHour(self):
+        result = []
+        for attribute in (self.__dict__):
+            result.append(self.__dict__[attribute])
+        return result
     
-    def printFullHour(self):
+    def checkFullHour(self):
         result = ""
         for attribute in (self.__dict__):
-            result += str(attribute) + ":"
+            result += str(self.__dict__[attribute]) + ":"
         print(result[:-1])
