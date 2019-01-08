@@ -1,6 +1,4 @@
-from interface import Interface
-
-class Item(Interface):
+class Item():
 
     def __init__(self, name, sell_in, quality):
         self.name = name
@@ -26,4 +24,3 @@ if __name__ == "__main__":
     assert new_item.getName() == "Edu"
     assert new_item.getSellIn() == 10
     assert new_item.getQuality() == 100
-    assert new_item.update_quality() == None
