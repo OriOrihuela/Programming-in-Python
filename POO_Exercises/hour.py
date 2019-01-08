@@ -27,3 +27,6 @@ class Hour():
         self.seconds = seconds
     def getSeconds(self, seconds):
         return self.seconds
+    
+
+    
