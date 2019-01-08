@@ -42,3 +42,9 @@ class Hour():
     
     def getFullHour(self, hour, minutes, seconds):
         return [self.hour, self.minutes, self.seconds]
+    
+    def printFullHour(self):
+        result = ""
+        for attribute in (self.__dict__):
+            result += str(attribute) + ":"
+        print(result[:-1])
