@@ -2,6 +2,9 @@ class Data():
     
     def __init__(self, day, month, year):
         assert self.day in range(1,32) and self.month in range(1,13) and self.year in range(1900, 3001)
+        self.day = 1
+        self.month = 1
+        self.year = 1900
         try:
             self.day = day
             self.month = month
