@@ -12,3 +12,18 @@ class Hour():
             self.hour = 0
             self.minutes = 0
             self.seconds = 0
+    
+    def setHour(self, hour):
+        self.hour = hour
+    def getHour(self, hour):
+        return self.hour
+    
+    def setMinutes(self, minutes):
+        self.minutes = minutes
+    def getMinutes(self, minutes):
+        return self.minutes
+    
+    def setSeconds(self, seconds):
+        self.seconds = seconds
+    def getSeconds(self, seconds):
+        return self.seconds
