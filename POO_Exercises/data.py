@@ -41,18 +41,24 @@ class Data():
             self.month = 1
             self.year = 1900
     
-    def increaseDate(self, number):
+    def increaseDays(self, number):
         try:
-            self.day += number
-        except AssertionError:
-            if self.day > 31:
-                try:
+            while number > 0:
+                self.day += 1
+                if self.day > 31:
                     self.day = 1
                     self.month += 1
-                except AssertionError:
                     if self.month > 12:
                         self.month = 1
                         self.year += 1
+                number += 1
+            assert self.year in range(1900, 3001)
+        except AssertionError:
+            self.day = 1
+            self.month = 1
+            self.year = 1900
+        except ValueError:
+            print("%s not a integer" % number)
 
     def printNameMonth(self, month):
         values = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
@@ -60,7 +66,8 @@ class Data():
         months = dict(zip(keys,values))
         if self.month in months:
             self.month = months[keys]
+        return self
 
     def  printDate(self, day, month, year):
-        return str(self.day) + ":" + printNameMonth(self.month) + ":" + str(self.year)
+        return str(self.day) + ":" + self.printNameMonth(self.month) + ":" + str(self.year)
             
