@@ -5,8 +5,9 @@ def binaryResearch(array, numeroBuscado):
     
     posIzquierda = 0
     posDerecha = len(array) - 1
+    posCentral = 0
     
-    while posIzquierda <= posDerecha:
+    while posIzquierda <= posDerecha and posCentral != numeroBuscado:
         
         posCentral = int((posIzquierda + posDerecha) / 2)
         
