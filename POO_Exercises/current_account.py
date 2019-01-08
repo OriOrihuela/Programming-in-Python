@@ -12,27 +12,27 @@ class CurrentAccount():
 
     def setName(self, name):
         self.name = name
-    def getName(self, name):
+    def getName(self):
         return self.name
     
     def setSurname(self, surname):
         self.surname = surname
-    def getSurame(self, surname):
+    def getSurame(self):
         return self.surname
     
     def setDirection(self, direction):
         self.direction = direction
-    def getDirection(self, direction):
+    def getDirection(self):
         return self.direction
     
     def setPhone(self, phone):
         self.phone = phone
-    def getPhone(self, phone):
+    def getPhone(self):
         return self.phone
     
     def setBalance(self, balance):
         self.balance = balance
-    def getBalance(self, balance):
+    def getBalance(self):
         return self.balance
     
 
