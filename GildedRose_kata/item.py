@@ -15,7 +15,7 @@ class Item(Interface):
         return self.quality
 
     def __repr__(self):
-        return "%s, %s, %s" % (self.name, self.sell_in, self.quality)
+        return "%s, %s, %s" % (self.getName(), self.getSellIn(), self.getQuality)
 
 if __name__ == "__main__":
     
@@ -26,3 +26,4 @@ if __name__ == "__main__":
     assert new_item.getName() == "Edu"
     assert new_item.getSellIn() == 10
     assert new_item.getQuality() == 100
+    assert new_item.update_quality() == None
