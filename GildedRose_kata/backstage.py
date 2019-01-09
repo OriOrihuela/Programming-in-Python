@@ -2,22 +2,27 @@ from normal_Item import NormalItem
 
 class Backstage(NormalItem):
 
-    def __init__(self, name, sell_in, quality):
-        NormalItem.__init__(self, name, sell_in, quality)
-
-    def setQuality(self, valor):
-        NormalItem.setQuality(self, valor)
-        assert 0 <= self.quality <= 50, "quality de %s fuera de rango" % self.__class__.__name__
-
-    # Override metodo update_quality de la interfaz
     def update_quality(self):
-        if self.sell_in > 10:
-            self.setQuality(1)
-        elif self.sell_in > 5:
-            self.setQuality(2)
-        elif self.sell_in > 0:
-            self.setQuality(3)
+        if self.getSellIn() > 10:
+            self.quality += 1
+        
+        elif self.getSellIn() <= 5:
+            self.quality += 3
+
+        elif 5 <= self.getSellIn() <= 10:
+            self.quality += 2
+
         else:
-            # ocultar informacion: uf
             self.quality = 0
-        self.setSell_in()
+
+
+if __name__ == "__main__":
+    
+
+    # TEST CASES #
+
+    Edu = Backstage("Edu", 5, 20)
+    Edu.update_quality()
+
+    assert Edu.getQuality() == 23
+    assert Edu.getSellIn() == 5
