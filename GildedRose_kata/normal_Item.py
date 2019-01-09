@@ -8,6 +8,14 @@ class NormalItem(Item, Interface):
     
     def setSell_In(self):
         self.sell_in -=  1
+    
+
+    def getName(self):
+        return self.name
+    def getSellIn(self):
+        return self.sell_in
+    def getQuality(self):
+        return self.quality
 
 
     def setQuality(self, value):
@@ -20,7 +28,7 @@ class NormalItem(Item, Interface):
         
 
     def update_quality(self):
-        if self.sell_in > 0:
+        if self.sell_in >= 0:
             self.setQuality(-1)
         else:
             self.setQuality(-2)
@@ -32,5 +40,7 @@ if __name__ == "__main__":
     # TEST CASES # 
 
     new_item = NormalItem("Edu", 5, 50)
-    assert new_item.setSell_In() == 4
-    assert new_item.setQuality(0) == ("Edu", 4, 49)
+    new_item.update_quality()
+
+    assert new_item.getSellIn() == 4
+    assert new_item.getQuality == 49
