@@ -2,27 +2,35 @@ from item import Item
 from interface import Interface
 
 class NormalItem(Item, Interface):
-    # Herencia múltiple
 
-    def __init__(self, name, sell_in, quality):
-        Item.__init__(self, name, sell_in, quality)
+    '''def __init__(self, name, sell_in, quality):
+        Item.__init__(self, name, sell_in, quality)'''
+    
+    def setSell_In(self):
+        self.sell_in -=  1
 
-    def setSell_in(self):
-        self.sell_in = self.sell_in - 1
 
-    def setQuality(self, valor):
-        if self.quality + valor > 50:
+    def setQuality(self, value):
+        if self.quality + value > 50:
             self.quality = 50
-        elif self.quality + valor >= 0:
-            self.quality = self.quality + valor
+        elif self.quality + value >= 0:
+            self.quality = self.quality + value
         else:
             self.quality = 0
-        assert 0 <= self.quality <= 50, "quality de %s fuera de rango" % self.__class__.__name__
+        
 
-    # Override metodo update_quality de la interfaz
     def update_quality(self):
         if self.sell_in > 0:
             self.setQuality(-1)
         else:
             self.setQuality(-2)
-        self.setSell_in()
+        self.setSell_In()
+
+
+if __name__ == "__main__":
+    
+    # TEST CASES # 
+
+    new_item = NormalItem("Edu", 5, 50)
+    assert new_item.setSell_In() == 4
+    assert new_item.setQuality(0) == ("Edu", 4, 49)
