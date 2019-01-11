@@ -1,4 +1,3 @@
-
 # pag. 282 | Chapter 9: Tuples, Files, and Everything Else - Learning Python 5th Ed.
 # pag. 400 | Chapter 13: while and for Loops - Learning Python 5th Ed.
 
