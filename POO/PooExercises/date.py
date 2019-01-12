@@ -44,23 +44,21 @@ class Date():
     
 
     def increaseDays(self, number):
-        try:
-            while number > 0:
-                self.day += 1
-                if self.day > 31:
-                    self.day = 1
-                    self.month += 1
-                    if self.month > 12:
-                        self.month = 1
-                        self.year += 1
-                number += 1
-            assert self.year in range(1900, 3001)
-        except AssertionError:
-            self.day = 1
-            self.month = 1
-            self.year = 1900
-        except ValueError:
-            print("%s not a integer" % number)
+
+        totalDays = self.day + number
+
+        while totalDays > 31:
+            totalMonths = int(totalDays / 30) + self.month
+
+            while totalMonths > 12:
+                increaseYear = int(totalMonths / 12)
+                self.year += increaseYear
+                totalMonths = int(totalMonths % 12)
+
+            self.month = totalMonths
+            totalDays = int(totalDays % 31)
+        
+        self.day = totalDays
 
 
     def monthLetters(self):
@@ -94,3 +92,7 @@ if __name__ == "__main__":
     assert new_date.getDate() == "5:2:1995"
     assert new_date.monthLetters() == "February"
     assert new_date.printDate() == "5:February:1995"
+    new_date.increaseDays(4)
+    assert new_date.printDate() == "9:February:1995"
+    new_date.increaseDays(30)
+    assert new_date.printDate() == "8:March:1995"
