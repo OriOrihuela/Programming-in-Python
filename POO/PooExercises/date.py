@@ -74,7 +74,7 @@ class Date():
 
 
     def  printDate(self):
-        return str(self.day) + ":" + Date.monthLetters(self.month) + ":" + str(self.year)
+        return str(self.day) + ":" + self.monthLetters() + ":" + str(self.year)
     
 
     def getDate(self):
@@ -93,3 +93,4 @@ if __name__ == "__main__":
     new_date = Date(5, 2, 1995)
     assert new_date.getDate() == "5:2:1995"
     assert new_date.monthLetters() == "February"
+    assert new_date.printDate() == "5:February:1995"
