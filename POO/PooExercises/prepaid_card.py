@@ -26,3 +26,15 @@ class PrepaidCard():
         self.consumption = consumption
     def getConsumption(self):
         return self.consumption
+    
+
+    def depositBalance(self, amount):
+        self.balance += amount
+    
+
+    def sendMessage(self, numberMessagesToSend):
+        cost = numberMessagesToSend * 0.09
+        self.balance -= cost
+    
+
+    
