@@ -1,17 +1,17 @@
 class Hour():
     def __init__(self, hour, minutes, seconds):
-        self.hour = 0
-        self.minutes = 0
-        self.seconds = 0
+        self.hour = 00
+        self.minutes = 00
+        self.seconds = 00
         try:
             self.hour = hour
             self.minutes = minutes
             self.seconds = seconds
-            assert self.hour in range(0, 25) and self.minutes in range(0, 60) and self.seconds in range(0, 60)
+            assert self.hour in range(00, 25) and self.minutes in range(00, 60) and self.seconds in range(00, 60)
         except AssertionError:
-            self.hour = 0
-            self.minutes = 0
-            self.seconds = 0
+            self.hour = 00
+            self.minutes = 00
+            self.seconds = 00
 
     
     def setHour(self, hour):
@@ -35,11 +35,11 @@ class Hour():
             self.hour = hour
             self.minutes = minutes
             self.seconds = seconds
-            assert self.hour in range(0, 25) and self.minutes in range(0, 60) and self.seconds in range(0, 60)
+            assert self.hour in range(00, 25) and self.minutes in range(00, 60) and self.seconds in range(00, 60)
         except AssertionError:
-            self.hour = 0 
-            self.minutes = 0
-            self.seconds = 0
+            self.hour = 00
+            self.minutes = 00
+            self.seconds = 00
     
     def getFullHour(self):
         result = []
