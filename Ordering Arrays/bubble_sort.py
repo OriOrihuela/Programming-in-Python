@@ -30,7 +30,3 @@ if __name__ == "__main__":
     assert bubbleSort(['spam', 'ham', 'elmo']) == sorted(['spam', 'ham', 'elmo'])
     assert bubbleSort(['a', 'b', 'A', 'd', 'c', 'P']) == sorted(['a', 'b', 'A', 'd', 'c', 'P'])
     assert bubbleSort([1.4, 5, 3, 3.5, 2, 4.1]) == sorted([1.4, 5, 3, 3.5, 2, 4.1])
-
-
-
-    
