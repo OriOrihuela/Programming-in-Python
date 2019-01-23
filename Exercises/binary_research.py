@@ -5,22 +5,19 @@ def binaryResearch(array, numeroBuscado):
     
     posIzquierda = 0
     posDerecha = len(array) - 1
-    posCentral = 0
+    posCentral = int((posIzquierda + posDerecha) / 2)
     
-    while posIzquierda <= posDerecha and posCentral != numeroBuscado:
+    while posIzquierda <= posDerecha and array[posCentral] != numeroBuscado:
         
-        posCentral = int((posIzquierda + posDerecha) / 2)
-        
-        if array[posCentral] == numeroBuscado:
-            return posCentral
-        
-        elif array[posCentral] > numeroBuscado:
-            posDerecha = posCentral - 1
-        
-        else:
+        if numeroBuscado > array[posCentral]:
             posIzquierda = posCentral + 1
-    
-    return - 1
+        else:
+            posDerecha = posCentral - 1
+        posCentral = int((posIzquierda + posDerecha) / 2)
+    if array[posCentral] == numeroBuscado:
+        return posCentral
+    else:
+        return - 1
 
 
 if __name__ == "__main__":
