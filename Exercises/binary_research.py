@@ -33,3 +33,5 @@ if __name__ == "__main__":
     array3 = [43,56,12,11,8,97,100,67]
     assert binaryResearch(array3, 97) == 5
 
+    array4 = [45,23,46,78,9,65]
+    assert binaryResearch(array4, 5) == -1
